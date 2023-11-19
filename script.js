@@ -1,4 +1,4 @@
-const audioPlayer = document.getElementById("audio-player");
+const audioPlayer = document.getElementById("musicPlayer_aser");
 const musicFolder = "./music/mix/"; // Adjust the path to your music folder
 
 // these are list of all file name to run in rendon play
@@ -102,7 +102,7 @@ const musicFiles = [
   "song 97.mp3",
   "song 98.mp3",
   "song 99.mp3",
-  "song 100 .mp3",
+  "song 100.mp3",
   "song 101.mp3",
   "song 102.mp3",
   "song 103.mp3",
@@ -455,3 +455,16 @@ function playRandom() {
   audioPlayer.src = audioSource;
   audioPlayer.play();
 }
+
+
+ const musicPlayer_ser = document.getElementById('musicPlayer_ser');
+    const songs = ['song1.mp3', 'song2.mp3', 'song3.mp3']; // Add more songs as needed
+    let currentSongIndex = 0;
+
+    musicPlayer_ser.addEventListener('ended', playNextSong);
+
+    function playNextSong() {
+        currentSongIndex = (currentSongIndex + 1) % songs.length;
+        musicPlayer_ser.src = `music/mix/${songs[currentSongIndex]}`;
+        musicPlayer_ser.play();
+    }

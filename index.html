@@ -12,8 +12,13 @@
   <body>
     <div class="music-player">
       <h1>MSplayer</h1>
-      <audio id="audio-player" controls></audio>
+      <audio id="musicPlayer_ser" controls autoplay >
+        <source src="music/mix/song1.mp3" >
+      </audio>
       <br>
+      <audio id="musicPlayer_aser" controls autoplay >
+        <source src="music/mix/song1.mp3" >
+      </audio>
       <button class="rendon-button" onclick="playRandom()">Play Rendom</button>
     </div>
     <div class="other-playlist">
